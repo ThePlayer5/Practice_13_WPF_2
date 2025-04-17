@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practice_13_WPF_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid Background="#3d3e40">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -78,7 +78,7 @@
                     FontSize="15"
                     Foreground="White"
                     Padding="0 0 0 2"
-                    Margin="560 0 10 0"/>
+                    Margin="750 0 10 0"/>
             <Button Content="Close"
                     Background="#818284"
                     Width="100"
@@ -92,6 +92,7 @@
               Grid.RowSpan="7"
               Background="#494a4c">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -214,6 +215,23 @@
                      Padding="0 10 0 0"
                      HorizontalAlignment="Left"
                      VerticalAlignment="Bottom"/>
+            <TextBlock Text="Birthday:"
+                       Foreground="White"
+                       FontSize="16"
+                       Grid.Column="3"
+                       VerticalAlignment="Bottom"/>
+            <Calendar HorizontalAlignment="Left"
+                      VerticalAlignment="Center"
+                      Grid.Column="4"
+                      Grid.ColumnSpan="2"
+                      Grid.RowSpan="4">
+
+                <Calendar.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1.5" ScaleY="1"/>
+                    </TransformGroup>
+                </Calendar.LayoutTransform>
+            </Calendar>
         </Grid>
     </Grid>
 </Window>
